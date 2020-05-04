@@ -1,3 +1,5 @@
+from time import perf_counter
+
 dificulty = 4
 max_x = 100
 maxy_y = 100
@@ -8,6 +10,9 @@ class gameManager():
 
 
     def tick(self):
+        tic = perf_counter()
+        toc = perf_counter()
+
 
 
     def update_score(self):
