@@ -62,19 +62,23 @@ class Snake():
         start_x = max_x//2#xposition
         start_y = max_y//2#y position
         v = 0.1 * (dificulty ** 2) #velocity multiplied by the square of the difficult number
-        self.dir_x=1
-        self.dir_y=0
-        start_length = 2
+        self.dir_x=0
+        self.dir_y=1
+        #start_length = 2 # for now the snake is only one cube
         loc = [(start_x,start_y),]
+        print(loc)
 
 #### NEED TO SWAP X AND Y DIRECTIONS
 
     def move(self):
         global loc
+        n = len(loc)
+        new_locs = [0]*n
+        for i in range(n-1):
+            new_locs[i+1] = loc[i]
         for event in pygame.event.get():
             #print(event)
             #if event.type == pygame.KEYDOWN or event.type == pygame.KEYUP:
-
             keys = pygame.key.get_pressed()
             if keys[pygame.K_DOWN]:
                 if self.dir_y != -1:
@@ -92,38 +96,36 @@ class Snake():
                 if self.dir_x != -1:
                     self.dir_y = 0
                     self.dir_x = 1
-        for i in range(len(loc)):
-            x,y = loc[i][0], loc[i][1]
-            if (x <= 0 and self.dir_x ==-1):
-                loc[i] = ((max_x-1), (y))
-            elif (y <= 0 and self.dir_y ==-1):
-                loc[i] = (x, (max_y-1))
-            elif (x >= (max_x-snake_size) and self.dir_x ==1):
-                loc[i] = ((0), (y))
-            elif (y >= (max_y-snake_size) and self.dir_y ==1):
-                loc[i] = (x, (0))
-            else:
-                loc[i] = ((loc[i][0] + self.dir_x),(loc[i][1] + self.dir_y))
+        #for i in range(len(loc)):
+        x,y = loc[0][0], loc[0][1]
+        if (x <= 0 and self.dir_x ==-1):
+            new_locs[0] = ((max_x-snake_size), (y))
+        elif (y <= 0 and self.dir_y ==-1):
+            new_locs[0] = (x, (max_y-1))
+        elif (x >= (max_x-snake_size) and self.dir_x ==1):
+            new_locs[0] = ((0), (y))
+        elif (y >= (max_y-snake_size) and self.dir_y ==1):
+            new_locs[0] = (x, (0))
+        else:
+            new_locs[0] = ((loc[0][0] + self.dir_x*snake_size),(loc[0][1] + self.dir_y*snake_size))
+        loc = new_locs
 
     def draw(self,screen):
-        pygame.draw.rect(screen, WHITE, (loc[0][0], loc[0][1], snake_size, snake_size))
+        print(loc)
+        for i in range(len(loc)):
+            pygame.draw.rect(screen, WHITE, (loc[i][0], loc[i][1], snake_size, snake_size))
+            if i == 0:
+                pygame.draw.rect(screen, RED,
+                                 (loc[i][0]+(snake_size/4), loc[i][1]+(snake_size/4), snake_size/4, snake_size/4))
 
     def eat(self):
-        pass
-
-    def collision(self):
-        pass
-
-    def head(self):
-        return loc[0]
-
-    def controls(self):
-        pass
+        loc.append((loc[-1][0],loc[-1][1]))
 
 def drawWindow(screen):
     global s, win
     screen.fill(BLACK)
     s.draw(screen)
+    f.draw(screen)
     win.blit(pygame.transform.scale(screen, win.get_rect().size), (0, 0))
     pygame.display.update()
 
@@ -134,21 +136,24 @@ class Fruits():
     def add_random(self):
         self.fruits.append((4,5))
         pass
+    def draw(self,screen):
+        for i in range(len(self.fruits)):
+            pygame.draw.rect(screen, RED, (self.fruits[i][0], self.fruits[i][1], snake_size, snake_size))
 
 def main():
-    global s, win
+    global s, win, f
     #pygame.init()
     win = pygame.display.set_mode((max_x*scale_factor,max_y*scale_factor)) # pixel scaling *6 on display
     screen = pygame.Surface((max_x,max_y)) # put screen on window to allow for scaling
     #game = GameManager()
     #game.start()
     s = Snake()
+    f = Fruits()
     clock = pygame.time.Clock()
     run = True
     while run:
         pygame.time.delay(20)
-        clock.tick(20)
+        clock.tick(30)
         drawWindow(screen)
         s.move()
-
 main()
