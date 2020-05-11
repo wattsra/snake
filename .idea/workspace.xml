@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ea959d5-f90a-4a83-baa9-ea76bbbc4172" name="Default Changelist" comment="movement of snake now enabled and simplified code to remove game manager">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/snake.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/snake.iml" afterDir="false" />
+    <list default="true" id="9ea959d5-f90a-4a83-baa9-ea76bbbc4172" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HighScore.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
@@ -81,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589021345392</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added drawing of fruit and snake head and movement across and looping screen.">
+      <created>1589049860003</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589049860003</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,7 +104,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="movement of snake now enabled and simplified code to remove game manager" />
-    <option name="LAST_COMMIT_MESSAGE" value="movement of snake now enabled and simplified code to remove game manager" />
+    <MESSAGE value="added drawing of fruit and snake head and movement across and looping screen." />
+    <option name="LAST_COMMIT_MESSAGE" value="added drawing of fruit and snake head and movement across and looping screen." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1936" y="113" key="#app" timestamp="1589021547782">
@@ -109,58 +116,62 @@
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
     <state x="1280" y="0" width="1920" height="1044" key="#com.intellij.execution.impl.EditConfigurationsDialog/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1588860392825" />
-    <state x="1839" y="171" key="CommitChangelistDialog2" timestamp="1589022515679">
+    <state x="1839" y="171" key="CommitChangelistDialog2" timestamp="1589049859928">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state x="1839" y="171" key="CommitChangelistDialog2/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589022515679" />
+    <state x="1839" y="171" key="CommitChangelistDialog2/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589049859928" />
     <state x="2027" y="280" key="FileChooserDialogImpl" timestamp="1588871565037">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
     <state x="2027" y="280" key="FileChooserDialogImpl/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1588871565037" />
-    <state width="1897" height="275" key="GridCell.Tab.0.bottom" timestamp="1589049771881">
+    <state width="1897" height="275" key="GridCell.Tab.0.bottom" timestamp="1589204443163">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.bottom/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589049771881" />
-    <state width="1897" height="275" key="GridCell.Tab.0.center" timestamp="1589049771880">
+    <state width="1897" height="275" key="GridCell.Tab.0.bottom/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589204443163" />
+    <state width="1897" height="275" key="GridCell.Tab.0.center" timestamp="1589204443163">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.center/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589049771880" />
-    <state width="1897" height="275" key="GridCell.Tab.0.left" timestamp="1589049771880">
+    <state width="1897" height="275" key="GridCell.Tab.0.center/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589204443163" />
+    <state width="1897" height="275" key="GridCell.Tab.0.left" timestamp="1589204443163">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.left/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589049771880" />
-    <state width="1897" height="275" key="GridCell.Tab.0.right" timestamp="1589049771881">
+    <state width="1897" height="275" key="GridCell.Tab.0.left/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589204443163" />
+    <state width="1897" height="275" key="GridCell.Tab.0.right" timestamp="1589204443163">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.right/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589049771881" />
-    <state width="1897" height="340" key="GridCell.Tab.1.bottom" timestamp="1589049760373">
+    <state width="1897" height="275" key="GridCell.Tab.0.right/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589204443163" />
+    <state width="1897" height="340" key="GridCell.Tab.1.bottom" timestamp="1589189751729">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="340" key="GridCell.Tab.1.bottom/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589049760373" />
-    <state width="1897" height="340" key="GridCell.Tab.1.center" timestamp="1589049760373">
+    <state width="1897" height="340" key="GridCell.Tab.1.bottom/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589189751729" />
+    <state width="1897" height="340" key="GridCell.Tab.1.center" timestamp="1589189751729">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="340" key="GridCell.Tab.1.center/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589049760373" />
-    <state width="1897" height="340" key="GridCell.Tab.1.left" timestamp="1589049760373">
+    <state width="1897" height="340" key="GridCell.Tab.1.center/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589189751729" />
+    <state width="1897" height="340" key="GridCell.Tab.1.left" timestamp="1589189751729">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="340" key="GridCell.Tab.1.left/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589049760373" />
-    <state width="1897" height="340" key="GridCell.Tab.1.right" timestamp="1589049760373">
+    <state width="1897" height="340" key="GridCell.Tab.1.left/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589189751729" />
+    <state width="1897" height="340" key="GridCell.Tab.1.right" timestamp="1589189751729">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="340" key="GridCell.Tab.1.right/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589049760373" />
+    <state width="1897" height="340" key="GridCell.Tab.1.right/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589189751729" />
     <state x="1685" y="141" key="SettingsEditor" timestamp="1589022455767">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
     <state x="1685" y="141" key="SettingsEditor/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589022455767" />
-    <state x="1840" y="258" key="Vcs.Push.Dialog.v2" timestamp="1589021350659">
+    <state x="1840" y="258" key="Vcs.Push.Dialog.v2" timestamp="1589049866047">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state x="1840" y="258" key="Vcs.Push.Dialog.v2/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589021350659" />
-    <state x="1850" y="136" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589049347857">
+    <state x="1840" y="258" key="Vcs.Push.Dialog.v2/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589049866047" />
+    <state x="1850" y="136" width="570" height="615" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589192257174">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state x="1850" y="136" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589049347857" />
+    <state x="1850" y="136" width="570" height="615" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589192257174" />
+    <state x="1903" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1589190222967">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1903" y="230" width="672" height="678" key="search.everywhere.popup/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589190222967" />
     <state x="1970" y="436" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1589021400158">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
