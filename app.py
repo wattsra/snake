@@ -1,5 +1,6 @@
 import pygame
 import random
+import os
 
 snake_size = scale_factor = 4
 scale_x = 20
@@ -206,13 +207,20 @@ def main():
             clock.tick(speed)
             drawWindow(screen)
             s.move()
-        with open("HighScore.txt","r") as f:
-            high = int(f.read())
-            if score > high:
-                high = score
-                f = open("HighScore.txt","w")
-                f.write(str(high))
-                f.close()
+
+        if os.path.exists("HighScore.txt"):
+            with open("HighScore.txt","r") as f:
+                high = int(f.read())
+                if score > high:
+                    high = score
+                    f = open("HighScore.txt","w")
+                    f.write(str(high))
+                    f.close()
+        else:
+            high = score
+            f = open("HighScore.txt", "w")
+            f.write(str(high))
+            f.close()
         drawLoseWindow(screen)
         pygame.time.delay(4000)
 

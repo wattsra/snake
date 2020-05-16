@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ea959d5-f90a-4a83-baa9-ea76bbbc4172" name="Default Changelist" comment="">
+    <list default="true" id="9ea959d5-f90a-4a83-baa9-ea76bbbc4172" name="Default Changelist" comment="added startmenu, highscores and increasing speed. buggy, but complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HighScore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,31 +124,31 @@
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
     <state x="1280" y="0" width="1920" height="1044" key="#com.intellij.execution.impl.EditConfigurationsDialog/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1588860392825" />
-    <state x="1839" y="171" key="CommitChangelistDialog2" timestamp="1589204758620">
+    <state x="1839" y="171" key="CommitChangelistDialog2" timestamp="1589635079934">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state x="1839" y="171" key="CommitChangelistDialog2/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589204758620" />
+    <state x="1839" y="171" key="CommitChangelistDialog2/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589635079934" />
     <state x="498" y="293" key="FileChooserDialogImpl" timestamp="1589543910138">
       <screen x="0" y="28" width="1280" height="1024" />
     </state>
     <state x="498" y="293" key="FileChooserDialogImpl/1280.0.1920.1080/0.28.1280.1024@0.28.1280.1024" timestamp="1589543910138" />
     <state x="2027" y="280" key="FileChooserDialogImpl/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1588871565037" />
-    <state width="1897" height="275" key="GridCell.Tab.0.bottom" timestamp="1589634371128">
+    <state width="1897" height="275" key="GridCell.Tab.0.bottom" timestamp="1589637533486">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.bottom/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589634371128" />
-    <state width="1897" height="275" key="GridCell.Tab.0.center" timestamp="1589634371128">
+    <state width="1897" height="275" key="GridCell.Tab.0.bottom/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589637533486" />
+    <state width="1897" height="275" key="GridCell.Tab.0.center" timestamp="1589637533486">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.center/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589634371128" />
-    <state width="1897" height="275" key="GridCell.Tab.0.left" timestamp="1589634371127">
+    <state width="1897" height="275" key="GridCell.Tab.0.center/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589637533486" />
+    <state width="1897" height="275" key="GridCell.Tab.0.left" timestamp="1589637533486">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.left/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589634371127" />
-    <state width="1897" height="275" key="GridCell.Tab.0.right" timestamp="1589634371128">
+    <state width="1897" height="275" key="GridCell.Tab.0.left/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589637533486" />
+    <state width="1897" height="275" key="GridCell.Tab.0.right" timestamp="1589637533486">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.right/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589634371128" />
+    <state width="1897" height="275" key="GridCell.Tab.0.right/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589637533486" />
     <state width="1897" height="340" key="GridCell.Tab.1.bottom" timestamp="1589204889412">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
@@ -175,10 +177,10 @@
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
     <state x="1850" y="136" width="570" height="615" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589192257174" />
-    <state x="1903" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1589190222967">
+    <state x="1903" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1589635105452">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
-    <state x="1903" y="230" width="672" height="678" key="search.everywhere.popup/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589190222967" />
+    <state x="1903" y="230" width="672" height="678" key="search.everywhere.popup/1280.0.1920.1080/0.28.1280.1024@1280.0.1920.1080" timestamp="1589635105452" />
     <state x="1970" y="436" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1589021400158">
       <screen x="1280" y="0" width="1920" height="1080" />
     </state>
