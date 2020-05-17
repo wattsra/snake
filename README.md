@@ -10,7 +10,7 @@ A python snake game written in pygame.
 - Add High-score to page at all times
 - amend new game mode to go back to start menu rather than starting again immediately
 
-##Screenshots
+## Screenshots
 Starting Menu
 
 ![Game Play image 1](Screenshots/Starting%20Menu.png)
