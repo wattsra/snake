@@ -17,4 +17,4 @@ Starting Menu
 
 Game Play
 
-![Game Play image 1](Screenshots/Gameplay1.png)![Game Play image 1](Screenshots/Gameplay2.png)
+![Game Play image 2](Screenshots/Gameplay2.png)![Game Play image 3](Screenshots/Gameplay3.png)
